@@ -1,54 +1,59 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
 /* Container for the overall layout */
 .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 20px;
-  height: 100vh; /* Full viewport height */
   box-sizing: border-box;
 }
 
-/* Section for the Dengue Data form and uploader */
+/* Section for the form and uploader */
 .form-section {
   width: 100%;
-  max-width: 600px; /* Adjust as needed */
+  max-width: 800px;
   box-sizing: border-box;
   padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-/* List section to hold the data and make it scrollable */
+/* List section to hold the data */
 .list-section {
-  flex: 2;
-  overflow-y: auto; /* Make the list scrollable */
-  max-width: 60%;
+  max-width: 100%;
+  margin-top: 20px;
 }
+
 
 /* Center the section titles */
-h2 {
+h2, h1 {
   text-align: center;
+  color: #333;
 }
 
 h1 {
-  text-align: center;
-  text-align: center; /* Center the text */
-  font-size: 3rem; /* Large font size */
-  font-weight: bold; /* Optional: make the text bold */
-  color: #1e88e5; /* Blue color */
-  margin-bottom: 20px; /* Space below the title */
-  padding: 10px; /
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e88e5;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 /* Styling for the header and the title */
 .App-header {
+  background-color: #f4f4f4;
+  padding: 20px;
   text-align: center;
-  text-align: center; /* Center the text */
-  font-size: 3rem; /* Large font size */
-  font-weight: bold; /* Optional: make the text bold */
-  color: #1e88e5; /* Blue color */
-  margin-bottom: 20px; /* Space below the title */
-  padding: 10px; /
 }
 
-/* Styling for the main title with gradient blue and centering */
 .app-title {
   background: linear-gradient(to right, #1e88e5, #42a5f5, #64b5f6); /* Gradient blue */
   color: white;
@@ -57,8 +62,8 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 2.5rem; /* Larger font size */
-  width: 100%; /* Full width of the page */
+  font-size: 2.5rem;
+  width: 100%;
 }
 
 /* Styling for form input and buttons */
@@ -69,13 +74,41 @@ form {
 
 input, button {
   box-sizing: border-box;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
   font-size: 1rem;
   border-radius: 5px;
+  border: 1px solid #87ceeb;
 }
 
-/* Optional button hover effect */
+button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 button:hover {
-  background-color: #0056b3; /* Slightly darker color on hover */
+  background-color: #0056b3;
+}
+
+/* Table Styling for List Section */
+.list-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-section th, .list-section td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.list-section th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.list-section td {
+  background-color: white;
 }

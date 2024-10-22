@@ -5,7 +5,7 @@ import { Chart as ChartJS, PointElement, ScatterController, Tooltip, Legend, Tit
 // Register the required components
 ChartJS.register(PointElement, ScatterController, Tooltip, Legend, Title, LinearScale);
 
-const ScatterPlot = ({ data }) => {
+const ScatterPlot = ({ data = [] }) => { // Default to empty array if data is undefined
   const [selectedLocation, setSelectedLocation] = useState('All Location');
   const [timePeriod, setTimePeriod] = useState('Monthly');
 
@@ -18,6 +18,11 @@ const ScatterPlot = ({ data }) => {
       return `${date.getFullYear()}`;
     }
   };
+
+  // Check if data is available and is an array before filtering
+  if (!Array.isArray(data)) {
+    return <div>No data available to plot.</div>;
+  }
 
   // Filter data by location and time period
   const filteredData = data
